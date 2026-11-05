@@ -1,0 +1,387 @@
+:root{
+  --main-color: darkblue;
+  --background-color: gray;
+  --text-color: black;
+  --card-color:  red;
+  --fot: darkgoldenrod;
+}
+body{
+  min-height: 100vh;
+  
+  background-color:var(--background-color);
+  margin: 0px;
+  font-style: Arial sans-serif;
+}
+h1{
+  color: var(--main-color);
+  font-size:40px;
+  text-align: center;
+  text-shadow: 2px 2px 4px gray;
+}
+h1{
+  animation: appear 2s;
+  }
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+   opacity: 0.1;
+  }
+}
+h2{
+  color: darkblue;
+}
+p{
+  background-color: white;
+  color: darkred;
+  font-size: 18px;
+  
+}
+img{
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  border: 3px black solid;
+  display: black;
+  margin: 20px auto;
+  
+}
+nav{
+  background-color: black;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  gap: 30px;
+}
+  nav a{
+  text-decoration: none; 
+  color: white;
+  font-size: 20px;
+  margin: 15px;
+    transition: 0.3s;
+}
+nav a:hover{
+  color: darkolivegreen;
+}
+#home{
+  text-align: center;
+  padding: 60px 20px;
+}
+button{
+  background-color: linear-gradient(to right, black);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: 0.8s;
+  
+}
+button:hover {
+  background-color: blue;
+  transform: scale(1.1);
+}
+.box{
+  width: 60%;
+  height: 10%;
+  background-color: violet;
+  
+  padding: 15px;
+  margin: 20px auto;
+  margin-right: 5px;
+  margin-top: 2px;
+  border: 3px solid black;
+  border-radius: 15px;
+}
+.container{
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (max-width:600px){
+  .container{
+    flex-direction: column;
+    align-items: centre;
+  }
+  .card{width: 80%}
+
+  }
+.card{
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  
+  border: 2px gold solid;
+  border-radius:15px;
+}
+.card::before{
+  content: "NEW";
+  position: absolute;
+  background-color: red;
+  color: white;
+  top: 10px;
+  padding: 12px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    width: 80%;
+    margin: 30px auto;
+  
+}
+.grid-class{
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+  color: var(--text-color)
+     
+}
+.grid-class:hover{
+  transform: translateY(-10px); 
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+   
+}
+
+  
+  
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.form-section{
+  width: 80%;
+  max-width: 500px;
+  background-color: white;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 15px;
+  border: 2px solid red;
+}
+.form-section h2{
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  
+}
+input,textarea{
+  padding: 12px;
+  border: 2px solid gray;
+  border-radius:  8px;
+  font-size: 16px;
+}
+textarea{
+  height: 120px;
+  resize: vertical;
+  
+}
+form button{
+  margin: 10px;
+  cursor: pointer;
+  background-color: linear-gradient( to right
+                             lightblue,lightcoral)
+}
+.position-box{
+  width: 200px;
+  height:200px;
+  margin: 30px auto;
+  background-color: white;
+  border: 3px solid black;
+  position: relative;
+}
+.small-box{
+  width: 80px;
+  height: 80px;
+ background-color: black; 
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+}
+.fixe{
+  background-color: red;
+  position: fixed;
+  top: 1px;
+  right: 5px;
+  border-radius: 20%;
+  padding: 15px;
+}
+.flex-container{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.flex-card{
+  background-color: var(--text-color);
+  color:var(--card-color);
+  padding: 30px;
+  border: 2px solid var(--fot);
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-end;
+  
+}
+.layer-box{
+  background-color: var(--main-color);
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px auto;
+}
+.box-one{
+  position: absolute;
+  background-color: pink;
+  width: 150px;
+  height: 200px;
+  top: 20px;
+  left: 30px;
+  z-index: 2;
+}
+.box-two{
+  position: absolute;
+  background-color: limegreen;
+  width: 150px;
+  height: 200px;
+  top: 80px;
+  left: 80px;
+  z-index: 3;
+       }
+.box-three{
+  position: absolute;
+  background-color: orange;
+  width: 150px;
+  height: 200px;
+  top: 100px;
+  left: 90px;
+  z-index: 1;
+}
+.title {
+    text-align: center;
+    color: darkblue;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 4px;
+    background-color: darkblue;
+    margin: 10px auto;
+    border-radius:20px;
+}
+.title::before {
+    content: "YOU ARE";
+}
+.sectitle::after{
+    content: "";
+  
+  position: absolute;
+  top: 430px;
+  left: 20%;
+    width: 100px;
+  
+  background-color: black;
+  transform: translatex(50%);
+}
+.move{
+  width: 55px;
+  height: 50px;
+  background-color: green;
+  text-align: center;
+  border-radius: 15px;
+  animation: movebox 2s infinite 
+    alternate;
+  
+}
+@keyframes movebox {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(200px);
+  }
+}
+.fade{
+  width: 55px;
+  height: 50px;
+  background-color: green;
+  text-align: center;
+  border-radius: 15px;
+  transform: scale(1.5);
+}
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.animated-box {
+    animation: grow 2s infinite;
+  animation-delay: 10s;
+}
+.advanced-box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 20px;
+
+    animation: advancedAnimation 4s infinite;
+}
+
+@keyframes advancedAnimation {
+
+    0% {
+        transform: translateX(0)
+          rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateX(100px)
+          rotate(90deg) scale(1.2);
+          rotate(360deg) scale(1);
+    }
+
+    50% {
+        transform: translateX(200px) 
+          rotate(180deg) scale(1.5);
+    }
+
+    75% {
+        transform: translateX(100px) 
+          rotate(270deg) scale(1.2);
+    }
+
+    100% {
+        transform: translateX(0) 
+    }
+}
